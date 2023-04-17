@@ -10,12 +10,56 @@
     align-items: center;
     justify-content: center;
     font-weight: 400;
-    color:#E50815;
+    color:var(--red);
 }
 .movies{
     display: grid;
     grid-template-columns: repeat(2,minmax(400px,1fr));
+    gap:100px;
     padding:50px;
     width: 80%;
     padding-top: 70px;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    padding:1% 4%;
+    position:fixed;
+    left: 0;
+    right: 0;
+    top:0;
+    z-index: 1;
+    background-color: #171712;
+    
+}
+.nav a{
+    color:var(--red);
+    font-weight: 700;
+    padding-right: 10px;
+    font-size: 20px;
+}
+.navType{
+    align-items: center;
+    display: flex;
+    margin:0;
+    padding: 0;
+}
+.navType li, .navIcon li{
+    padding: 4px 15px;
+}
+.navIcon{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+    height: 100%;
+    right: 4%;
+    top:0;
+}
+
+@media  screen and (max-width:1090px){
+    .movies{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
 }
